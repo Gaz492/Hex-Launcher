@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/Gaz492/Hex-Launcher"
   },
+  "scripts": {
+    "start": "electron ."
+  },
   "dependencies": {
     "electron": "^1.6.2",
     "electron-debug": "^1.1.0",
