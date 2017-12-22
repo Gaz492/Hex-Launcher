@@ -5,7 +5,7 @@
   "description": "A modpack downloader for curse",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaz492/curse-downloader"
+    "url": "https://github.com/Gaz492/Hex-Launcher"
   },
   "dependencies": {
     "electron": "^1.6.2",
