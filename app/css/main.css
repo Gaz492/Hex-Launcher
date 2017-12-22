@@ -1,0 +1,114 @@
+html, body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #2b2b2b;
+    /*color: #fff;*/
+    overflow: hidden;
+}
+
+.card-img-left {
+    border-bottom-left-radius: calc(.25rem - 1px);
+    border-top-left-radius: calc(.25rem - 1px);
+    float: left;
+    padding-right: 1em;
+    margin-bottom: -1.25em;
+}
+
+.header {
+    display: flex;
+    flex: 0 1 auto;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    /*justify-content: center;*/
+    align-content: stretch;
+    align-self: auto;
+    height: 200px;
+    background-image: url(../images/landing-bg.jpg);
+    background-position: center center;
+    top: 0px;
+}
+
+.browse-buttons {
+    margin-left: 230px
+}
+
+.packs{
+    position: absolute;
+    height: calc(100% - 223px);
+    overflow-y: auto;
+    display: block;
+    color: #ffff;
+}
+
+.titlebar {
+    position: relative;
+    z-index: 9999;
+    display: flex;
+    width: 100vw;
+    height: 1.5rem;
+    background: #2b2b2b;
+    justify-content: space-between;
+}
+
+.titlebar--minimal.titlebar--macOS {
+    background: transparent;
+}
+
+.titlebar--macOS {
+    height: 2.1rem;
+}
+
+.titlebar--full-screen {
+    display: none;
+}
+
+.titlebar__title {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    color: white;
+    padding: 0 1rem 0 0.6rem;
+    margin: 0.4rem 0 0 0.4rem;
+    -webkit-app-region: drag;
+}
+
+.titlebar--macOS .titlebar__title {
+    line-height: 2.1rem;
+}
+
+.titlebar--macOS.titlebar--minimal .titlebar__title {
+    display: none;
+}
+
+.titlebar__section {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.titlebar__section--middle {
+    flex: 1;
+    margin: 0.4rem 0 0 0;
+    -webkit-app-region: drag;
+}
+
+.titlebar__icon {
+    cursor: default !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 2rem;
+    color: white;
+}
+
+.titlebar__icon .fill {
+    fill: white;
+}
+
+.titlebar__icon:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.titlebar__icon--close:hover {
+    background: #fc3636;
+}
