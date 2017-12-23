@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="hexLauncher">
 
 <head>
     <title>Hex Launcher</title>
@@ -9,69 +9,51 @@
         delete window.exports;
         delete window.module;
     </script>
-    <script src="js/angularjs.min.js"></script>
-    <script src="js/angular-route.min.js"></script>
     <!-- Bundled CSS -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="./css/bootstrap-material-design.min.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/yeti.css"/>
+    <!--<link rel="stylesheet" href="assets/css/bootstrap-material-design.min.css"/>-->
     <!--Custom CSS-->
-    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
     <!--<link rel="stylesheet" href="./css/bootstrap.override.css"/>-->
 
-    <!-- Custom JS-->
-    <script src="./js/main.js"></script>
-    <!-- Bundled JS-->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/popper.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/bootstrap-material-design.min.js"></script>
+    <!-- JavaScript -->
+    <script src="assets/js/angular/angular.min.js"></script>
+    <script src="assets/js/angular/angular-route.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--<script src="assets/js/bootstrap-material-design.min.js"></script>-->
+    <!-- App JS-->
+    <script src="app.js"></script>
+    <script src="app.config.js"></script>
+    <script src="views/home/home.controller.js"></script>
+    <script src="views/settings/settings.controller.js"></script>
+    <script src="views/allPacks/allPacks.controller.js"></script>
+    <script src="views/ftbPacks/ftbPacks.controller.js"></script>
 </head>
 
 <body>
-<div class="titlebar">
-    <div class="titlebar__section titlebar__section--left">
-        <a href="#">
-            <div class="titlebar__icon--menu titlebar__icon">
-                <svg class="" width="10px" height="11px" viewBox="0 0 10 11">
-                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g class="fill">
-                            <g transform="translate(0.000000, 1.000000)">
-                                <rect x="0" y="1" width="10" height="1"></rect>
-                                <rect x="0" y="4" width="10" height="1"></rect>
-                                <rect x="0" y="7" width="10" height="1"></rect>
-                            </g>
-                        </g>
-                    </g>
-                </svg>
-            </div>
-        </a>
-    </div>
-    <p class="titlebar__title"></p>
-    <div class="titlebar__section titlebar__section--middle"></div>
-    <div class="titlebar__section titlebar__section--right">
-        <div class="titlebar__icon--minimize titlebar__icon" id="min-btn">
-            <svg class="" width="10px" height="11px" viewBox="0 0 10 11">
-                <g stroke="none" stroke-width="" fill="none" fill-rule="evenodd">
-                    <g class="fill">
-                        <rect id="minimize" x="0" y="5" width="10" height="1"></rect>
-                    </g>
-                </g>
-            </svg>
-        </div>
-        <div class="titlebar__icon--close titlebar__icon" id="close-btn">
-            <svg class="" width="10px" height="11px" viewBox="0 0 10 11">
-                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g fill-rule="nonzero" class="fill">
-                        <path d="M5,4.82101759 L0.678982409,0.5 L0,1.17898241 L4.32101759,5.5 L0,9.82101759 L0.678982409,10.5 L5,6.17898241 L9.32101759,10.5 L10,9.82101759 L5.67898241,5.5 L10,1.17898241 L9.32101759,0.5 L5,4.82101759 Z"></path>
-                    </g>
-                </g>
-            </svg>
-        </div>
+<div>
+    <div ng-include src="'views/titlebar/titlebar.html'"></div>
+    <div class="">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="#">My Modpacks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#!ftbPacks">Browse FTB Packs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#!allPacks">Browse All Packs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#!settings">Settings</a>
+            </li>
+        </ul>
+        <ng-view></ng-view>
     </div>
 </div>
-<main ng-app="hexLauncher">
-    <ng-view></ng-view>
-</main>
 </body>
 
 </html>

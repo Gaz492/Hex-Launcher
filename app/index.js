@@ -1,6 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
+const launcherSettings = require('./modules/launcherSettings');
 
 require('electron-debug')({ showDevTools: false });
 // Keep a global reference of the window object, if you don't, the window will
@@ -20,7 +21,7 @@ function createWindow() {
 
             // Other
             sandbox: true,
-            icon: __dirname + '/images/icon.png',
+            icon: __dirname + '/assets/img/icon.png',
 
             // Size Settings
             minWidth: 1000,
