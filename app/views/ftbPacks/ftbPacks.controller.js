@@ -4,12 +4,9 @@
 //  Project: curse-downloader - 
 //////////////////////////////////////////////////////////////////////
 
-angular.module('hex.ftbPacks', [])
+angular.module('hex.ftbPacks', ['infinite-scroll'])
 
     .controller('FTBPacksController', function ($scope, $http) {
-        $scope.isActive = function (route) {
-            return route === $location.path();
-        };
         $scope.ftbPacks = [];
         $http({
             method: 'GET',

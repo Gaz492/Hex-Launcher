@@ -20,6 +20,7 @@
     <!-- JavaScript -->
     <script src="assets/js/angular/angular.min.js"></script>
     <script src="assets/js/angular/angular-route.min.js"></script>
+    <script src="assets/js/angular/ng-infinite-scroll.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -36,8 +37,8 @@
 <body>
 <div>
     <div ng-include src="'views/titlebar/titlebar.html'"></div>
-    <div class="">
-        <ul class="nav nav-tabs">
+    <div class="header">
+        <ul class="nav nav-tabs" style="margin-top: 160px;">
             <li class="nav-item">
                 <a class="nav-link" href="#">My Modpacks</a>
             </li>
@@ -51,8 +52,8 @@
                 <a class="nav-link" href="#!settings">Settings</a>
             </li>
         </ul>
-        <ng-view></ng-view>
     </div>
+    <ng-view></ng-view>
 </div>
 </body>
 

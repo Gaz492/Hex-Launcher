@@ -1,4 +1,4 @@
-<div class="header"></div>
+
 <div class="container-fluid">
     <div class="row">
         <div class="packs">
@@ -7,8 +7,8 @@
                 <tr ng-repeat="pack in packs | limitTo:10 track by $index" class="">
                     <th scope="row"><img width="150" ng-src="{{pack.image}}"></th>
                     <td class="align-middle">{{pack.name}}</td>
-                    <td class="align-middle">{{pack.summary}}</td>
-                    <td class="align-middle"><a href="#" class="btn btn-primary">Install</a></td>
+                    <td class="align-middle pr-5">{{pack.summary}}</td>
+                    <td class="align-middle pr-5"><a href="#" class="btn btn-primary">Install</a></td>
                 </tr>
                 </tbody>
             </table>

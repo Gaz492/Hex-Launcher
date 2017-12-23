@@ -4,12 +4,9 @@
 //  Project: curse-downloader - 
 //////////////////////////////////////////////////////////////////////
 
-angular.module('hex.allPacks', [])
+angular.module('hex.allPacks', ['infinite-scroll'])
 
     .controller('AllPacksController', function ($scope, $http) {
-        $scope.isActive = function (route) {
-            return route === $location.path();
-        };
         $scope.packs = [];
         $http({
             method: 'GET',

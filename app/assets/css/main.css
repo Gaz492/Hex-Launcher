@@ -38,7 +38,7 @@ html, body{
 
 .packs{
     position: absolute;
-    height: calc(100% - 263px);
+    height: calc(100% - 223px);
     overflow-y: auto;
     display: block;
     color: #ffff;

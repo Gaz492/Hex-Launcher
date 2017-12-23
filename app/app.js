@@ -10,4 +10,4 @@
     };
 })(jQuery);
 
-angular.module('hexLauncher', ['ngRoute', 'hex.myPacks', 'hex.settings', 'hex.config', 'hex.ftbPacks', 'hex.allPacks']);
+angular.module('hexLauncher', ['ngRoute', 'infinite-scroll', 'hex.myPacks', 'hex.settings', 'hex.config', 'hex.ftbPacks', 'hex.allPacks']);
